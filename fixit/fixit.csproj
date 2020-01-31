@@ -1,0 +1,167 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991537" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="SkiaSharp" Version="1.68.1.1" />
+    <PackageReference Include="SkiaSharp.Views" Version="1.68.1.1" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TheGame\" />
+    <Folder Include="TheGame\graphics\" />
+    <Folder Include="TheGame\sectorstates\" />
+    <Folder Include="TheGame\util\" />
+    <Folder Include="TheGame\entities\" />
+    <Folder Include="TheGame\input\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="TheGame\images\sprites_sin_fondo.png" />
+    <None Remove="TheGame\images\life.png" />
+    <None Remove="TheGame\images\initial_menu.png" />
+    <None Remove="TheGame\images\config.png" />
+    <None Remove="TheGame\images\bush.png" />
+    <None Remove="TheGame\images\window\1.png" />
+    <None Remove="TheGame\images\window\0.png" />
+    <None Remove="TheGame\images\window\semicircular\door\4.png" />
+    <None Remove="TheGame\images\window\semicircular\door\3.png" />
+    <None Remove="TheGame\images\window\semicircular\door\2.png" />
+    <None Remove="TheGame\images\window\semicircular\door\1.png" />
+    <None Remove="TheGame\images\window\semicircular\door\0.png" />
+    <None Remove="TheGame\images\window\semicircular\bigwindow\4.png" />
+    <None Remove="TheGame\images\window\semicircular\bigwindow\3.png" />
+    <None Remove="TheGame\images\window\semicircular\bigwindow\2.png" />
+    <None Remove="TheGame\images\window\semicircular\bigwindow\1.png" />
+    <None Remove="TheGame\images\window\semicircular\bigwindow\0.png" />
+    <None Remove="TheGame\images\window\obstacles\roof.png" />
+    <None Remove="TheGame\images\window\obstacles\flowerpot.png" />
+    <None Remove="TheGame\images\window\glasses\6.png" />
+    <None Remove="TheGame\images\window\glasses\5.png" />
+    <None Remove="TheGame\images\window\glasses\4.png" />
+    <None Remove="TheGame\images\window\glasses\3.png" />
+    <None Remove="TheGame\images\window\glasses\2.png" />
+    <None Remove="TheGame\images\window\glasses\1.png" />
+    <None Remove="TheGame\images\window\glasses\0.png" />
+    <None Remove="TheGame\images\window\doubledoor\3.png" />
+    <None Remove="TheGame\images\window\doubledoor\2.png" />
+    <None Remove="TheGame\images\window\doubledoor\1.png" />
+    <None Remove="TheGame\images\window\doubledoor\0.png" />
+    <None Remove="TheGame\images\ralph\Moving\1.png" />
+    <None Remove="TheGame\images\ralph\Moving\0.png" />
+    <None Remove="TheGame\images\ralph\demolishing\1.png" />
+    <None Remove="TheGame\images\ralph\demolishing\0.png" />
+    <None Remove="TheGame\images\ralph\climbing\1.png" />
+    <None Remove="TheGame\images\ralph\climbing\0.png" />
+    <None Remove="TheGame\images\felix\win\5.png" />
+    <None Remove="TheGame\images\felix\win\4.png" />
+    <None Remove="TheGame\images\felix\win\3.png" />
+    <None Remove="TheGame\images\felix\win\2.png" />
+    <None Remove="TheGame\images\felix\win\1.png" />
+    <None Remove="TheGame\images\felix\win\0.png" />
+    <None Remove="TheGame\images\felix\normal\normalRight\0.png" />
+    <None Remove="TheGame\images\felix\normal\normalLeft\0.png" />
+    <None Remove="TheGame\images\felix\moving\movingRight\3.png" />
+    <None Remove="TheGame\images\felix\moving\movingRight\2.png" />
+    <None Remove="TheGame\images\felix\moving\movingRight\1.png" />
+    <None Remove="TheGame\images\felix\moving\movingRight\0.png" />
+    <None Remove="TheGame\images\felix\moving\movingLeft\3.png" />
+    <None Remove="TheGame\images\felix\moving\movingLeft\2.png" />
+    <None Remove="TheGame\images\felix\moving\movingLeft\1.png" />
+    <None Remove="TheGame\images\felix\moving\movingLeft\0.png" />
+    <None Remove="TheGame\images\felix\fixing\fixingRight\1.png" />
+    <None Remove="TheGame\images\felix\fixing\fixingRight\0.png" />
+    <None Remove="TheGame\images\felix\fixing\fixingLeft\1.png" />
+    <None Remove="TheGame\images\felix\fixing\fixingLeft\0.png" />
+    <None Remove="TheGame\images\felix\falling\1.png" />
+    <None Remove="TheGame\images\felix\falling\0.png" />
+    <None Remove="TheGame\images\entities\nicelander\1.png" />
+    <None Remove="TheGame\images\entities\nicelander\0.png" />
+    <None Remove="TheGame\images\entities\cloud\0.png" />
+    <None Remove="TheGame\images\entities\cake\1.png" />
+    <None Remove="TheGame\images\entities\cake\0.png" />
+    <None Remove="TheGame\images\entities\brick\1.png" />
+    <None Remove="TheGame\images\entities\brick\0.png" />
+    <None Remove="TheGame\images\entities\bird\birdRight\1.png" />
+    <None Remove="TheGame\images\entities\bird\birdRight\0.png" />
+    <None Remove="TheGame\images\entities\bird\birdLeft\1.png" />
+    <None Remove="TheGame\images\entities\bird\birdLeft\0.png" />
+    <None Remove="TheGame\images\building\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TheGame\images\sprites_sin_fondo.png" />
+    <EmbeddedResource Include="TheGame\images\life.png" />
+    <EmbeddedResource Include="TheGame\images\initial_menu.png" />
+    <EmbeddedResource Include="TheGame\images\config.png" />
+    <EmbeddedResource Include="TheGame\images\bush.png" />
+    <EmbeddedResource Include="TheGame\images\window\1.png" />
+    <EmbeddedResource Include="TheGame\images\window\0.png" />
+    <EmbeddedResource Include="TheGame\images\window\semicircular\door\4.png" />
+    <EmbeddedResource Include="TheGame\images\window\semicircular\door\3.png" />
+    <EmbeddedResource Include="TheGame\images\window\semicircular\door\2.png" />
+    <EmbeddedResource Include="TheGame\images\window\semicircular\door\1.png" />
+    <EmbeddedResource Include="TheGame\images\window\semicircular\door\0.png" />
+    <EmbeddedResource Include="TheGame\images\window\semicircular\bigwindow\4.png" />
+    <EmbeddedResource Include="TheGame\images\window\semicircular\bigwindow\3.png" />
+    <EmbeddedResource Include="TheGame\images\window\semicircular\bigwindow\2.png" />
+    <EmbeddedResource Include="TheGame\images\window\semicircular\bigwindow\1.png" />
+    <EmbeddedResource Include="TheGame\images\window\semicircular\bigwindow\0.png" />
+    <EmbeddedResource Include="TheGame\images\window\obstacles\roof.png" />
+    <EmbeddedResource Include="TheGame\images\window\obstacles\flowerpot.png" />
+    <EmbeddedResource Include="TheGame\images\window\glasses\6.png" />
+    <EmbeddedResource Include="TheGame\images\window\glasses\5.png" />
+    <EmbeddedResource Include="TheGame\images\window\glasses\4.png" />
+    <EmbeddedResource Include="TheGame\images\window\glasses\3.png" />
+    <EmbeddedResource Include="TheGame\images\window\glasses\2.png" />
+    <EmbeddedResource Include="TheGame\images\window\glasses\1.png" />
+    <EmbeddedResource Include="TheGame\images\window\glasses\0.png" />
+    <EmbeddedResource Include="TheGame\images\window\doubledoor\3.png" />
+    <EmbeddedResource Include="TheGame\images\window\doubledoor\2.png" />
+    <EmbeddedResource Include="TheGame\images\window\doubledoor\1.png" />
+    <EmbeddedResource Include="TheGame\images\window\doubledoor\0.png" />
+    <EmbeddedResource Include="TheGame\images\ralph\Moving\1.png" />
+    <EmbeddedResource Include="TheGame\images\ralph\Moving\0.png" />
+    <EmbeddedResource Include="TheGame\images\ralph\demolishing\1.png" />
+    <EmbeddedResource Include="TheGame\images\ralph\demolishing\0.png" />
+    <EmbeddedResource Include="TheGame\images\ralph\climbing\1.png" />
+    <EmbeddedResource Include="TheGame\images\ralph\climbing\0.png" />
+    <EmbeddedResource Include="TheGame\images\felix\win\5.png" />
+    <EmbeddedResource Include="TheGame\images\felix\win\4.png" />
+    <EmbeddedResource Include="TheGame\images\felix\win\3.png" />
+    <EmbeddedResource Include="TheGame\images\felix\win\2.png" />
+    <EmbeddedResource Include="TheGame\images\felix\win\1.png" />
+    <EmbeddedResource Include="TheGame\images\felix\win\0.png" />
+    <EmbeddedResource Include="TheGame\images\felix\normal\normalRight\0.png" />
+    <EmbeddedResource Include="TheGame\images\felix\normal\normalLeft\0.png" />
+    <EmbeddedResource Include="TheGame\images\felix\moving\movingRight\3.png" />
+    <EmbeddedResource Include="TheGame\images\felix\moving\movingRight\2.png" />
+    <EmbeddedResource Include="TheGame\images\felix\moving\movingRight\1.png" />
+    <EmbeddedResource Include="TheGame\images\felix\moving\movingRight\0.png" />
+    <EmbeddedResource Include="TheGame\images\felix\moving\movingLeft\3.png" />
+    <EmbeddedResource Include="TheGame\images\felix\moving\movingLeft\2.png" />
+    <EmbeddedResource Include="TheGame\images\felix\moving\movingLeft\1.png" />
+    <EmbeddedResource Include="TheGame\images\felix\moving\movingLeft\0.png" />
+    <EmbeddedResource Include="TheGame\images\felix\fixing\fixingRight\1.png" />
+    <EmbeddedResource Include="TheGame\images\felix\fixing\fixingRight\0.png" />
+    <EmbeddedResource Include="TheGame\images\felix\fixing\fixingLeft\1.png" />
+    <EmbeddedResource Include="TheGame\images\felix\fixing\fixingLeft\0.png" />
+    <EmbeddedResource Include="TheGame\images\felix\falling\1.png" />
+    <EmbeddedResource Include="TheGame\images\felix\falling\0.png" />
+    <EmbeddedResource Include="TheGame\images\entities\nicelander\1.png" />
+    <EmbeddedResource Include="TheGame\images\entities\nicelander\0.png" />
+    <EmbeddedResource Include="TheGame\images\entities\cloud\0.png" />
+    <EmbeddedResource Include="TheGame\images\entities\cake\1.png" />
+    <EmbeddedResource Include="TheGame\images\entities\cake\0.png" />
+    <EmbeddedResource Include="TheGame\images\entities\brick\1.png" />
+    <EmbeddedResource Include="TheGame\images\entities\brick\0.png" />
+    <EmbeddedResource Include="TheGame\images\entities\bird\birdRight\1.png" />
+    <EmbeddedResource Include="TheGame\images\entities\bird\birdRight\0.png" />
+    <EmbeddedResource Include="TheGame\images\entities\bird\birdLeft\1.png" />
+    <EmbeddedResource Include="TheGame\images\entities\bird\birdLeft\0.png" />
+    <EmbeddedResource Include="TheGame\images\building\0.png" />
+  </ItemGroup>
+</Project>
