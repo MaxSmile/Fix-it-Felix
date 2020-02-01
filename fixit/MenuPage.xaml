@@ -9,8 +9,8 @@
            
             BackgroundColor="#333333"
             Orientation="Vertical"
-                     VerticalOptions="StartAndExpand"
-                     HorizontalOptions="StartAndExpand">
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand">
             <Image x:Name="yoImage"
                    Source="{local:ImageResource fixit.FormsImages.menutopImage.png}"/>
             <Button Text="Play!" x:Name="btnPlay"/>

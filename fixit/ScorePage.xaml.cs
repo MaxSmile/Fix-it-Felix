@@ -77,7 +77,14 @@ namespace fixit
 
         public void AddUserScore(string user, int score)
         {
-            _scoreList.Add("" + user, "" + score);
+            if(_scoreList.ContainsKey(user))
+            {
+                _scoreList[user] = "" + score;
+            } else
+            {
+                _scoreList.Add("" + user, "" + score);
+            }
+            
             string json = JsonConvert.SerializeObject(_scoreList);
             Application.Current.Properties["scores"] = json;
             _= App.Current.SavePropertiesAsync();

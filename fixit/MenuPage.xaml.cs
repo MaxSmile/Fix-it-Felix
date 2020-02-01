@@ -18,4 +18,7 @@ namespace fixit
             btnAbout.Clicked += (sender, args) => { _ = Navigation.PopModalAsync(true); };
         }
     }
+
+
+
 }

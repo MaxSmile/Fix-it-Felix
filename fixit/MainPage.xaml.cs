@@ -44,6 +44,16 @@ namespace fixit
             btnRight.Clicked += (sender, args) => { KeyBoard.right = true; };
             btnLeft.Clicked += (sender, args) => { KeyBoard.left = true; };
 
+
+            Task.Run(async () =>
+            {
+                await Task.Yield();
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    //DisplayAlert(Application.Current.ToString(), "SurfaceView(" + SurfaceView.Width + "," + SurfaceView.Height + ")","OK");
+                    Navigation.PushModalAsync(new MenuPage());
+                });
+            });
         }
 
 
@@ -71,15 +81,7 @@ namespace fixit
             base.OnAppearing();
             Application.Current.MainPage.SetValue(NavigationPage.BarBackgroundColorProperty, Color.FromHex("#661D08"));
             Application.Current.MainPage.SetValue(NavigationPage.BarTextColorProperty, Color.White);
-            Task.Run(async () =>
-            {
-                await Task.Yield();
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    //DisplayAlert(Application.Current.ToString(), "SurfaceView(" + SurfaceView.Width + "," + SurfaceView.Height + ")","OK");
-                    Navigation.PushModalAsync(new MenuPage());
-                });
-            });
+            
         }
 
 
