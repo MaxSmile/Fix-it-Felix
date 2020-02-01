@@ -11,5 +11,15 @@ namespace fixit
         {
             InitializeComponent();
         }
+
+        //protected override void OnAppearing()
+        //{
+        //    base.OnAppearing();
+        //    Application.Current.MainPage.SetValue(NavigationPage.BarBackgroundColorProperty, Color.FromHex("#661D08"));
+        //    Application.Current.MainPage.SetValue(NavigationPage.BarTextColorProperty, Color.White);
+
+           
+        //}
+
     }
 }

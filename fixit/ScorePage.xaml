@@ -5,18 +5,36 @@
              xmlns:local="clr-namespace:fixit;assembly=fixit"
              BackgroundColor="Black">
     <ContentPage.Content>
-            <StackLayout
-                BackgroundColor="Yellow"
+           <StackLayout
+                BackgroundColor="Black"
                 HorizontalOptions="CenterAndExpand"
-                VerticalOptions="CenterAndExpand">
+                VerticalOptions="CenterAndExpand"
+                Orientation="Vertical"
+                Margin="0,0,0,40">
+                <Image Source="{local:ImageResource fixit.FormsImages.ralph_icon.png}"/>
+
                 <StackLayout
-                    Margin="4"
-                    BackgroundColor="Wheat"
+                    BackgroundColor="#7A7A57"
                     HorizontalOptions="CenterAndExpand"
-                    VerticalOptions="CenterAndExpand">
-                    <Label
-                        x:Name="tempLabel"
-                        Text="Here have to be the score page"/>
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="220"
+                    HeightRequest="400">
+                    <StackLayout
+                        BackgroundColor="#B3B390"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="200"
+                        HeightRequest="380"
+                        Orientation="Vertical">
+                        <Image  Source="{local:ImageResource fixit.FormsImages.score_txt.png}"
+                                HorizontalOptions="CenterAndExpand"
+                                Margin="0,30,0,0"/>
+                        <Label
+                            x:Name="tempLabel"
+                            HorizontalOptions="CenterAndExpand"
+                            Margin="0,20,0,0"
+                            Text=""/>
+                    </StackLayout>
                 </StackLayout>
             </StackLayout>
     </ContentPage.Content>

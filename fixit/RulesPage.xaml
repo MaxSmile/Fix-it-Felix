@@ -5,8 +5,11 @@
              xmlns:local="clr-namespace:fixit;assembly=fixit"
              BackgroundColor="Black">
     <ContentPage.Content>
-        <StackLayout>
-
+        <StackLayout
+                BackgroundColor="Black"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <Image Source="{local:ImageResource fixit.FormsImages.rules_icon.png}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
