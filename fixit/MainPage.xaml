@@ -4,11 +4,24 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:views="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
-             mc:Ignorable="d" x:Class="fixit.MainPage">
+             xmlns:local="clr-namespace:fixit;assembly=fixit"
+             BackgroundColor="#661D08"
+             mc:Ignorable="d"
+             x:Class="fixit.MainPage">
 
     <StackLayout
-        BackgroundColor="Brown"
         Orientation="Vertical">
+        <StackLayout
+            Orientation="Horizontal">
+            <Label Text="SCORE: "/>
+            <Label x:Name="lblScore" Text="0"/>
+            <Label Text="TIME: "/>
+            <Label x:Name="lblTime" Text="3:00"/>
+            <Label Text="LIFES: "/>
+            <Image x:Name="imgLife1" Source="{local:ImageResource fixit.TheGame.images.life.png}"/>
+            <Image x:Name="imgLife2" Source="{local:ImageResource fixit.TheGame.images.life.png}"/>
+            <Image x:Name="imgLife3" Source="{local:ImageResource fixit.TheGame.images.life.png}"/>
+        </StackLayout>
 
         <StackLayout
             Margin="0"
