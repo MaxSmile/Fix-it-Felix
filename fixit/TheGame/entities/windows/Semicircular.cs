@@ -98,13 +98,6 @@ namespace fixit.TheGame.entities.windows
             return new SKRect((int)getX() + 5, (int)getY(), width - 11, height);
         }
 
-        override
-    public void getFixed()
-        {
-            if (isBroken())
-            {
-                strokesRequired--;
-            }
-        }
+        
     }
 }

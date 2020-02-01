@@ -1,10 +1,104 @@
 ﻿using System;
+using fixit.TheGame.graphics;
+using SkiaSharp;
+
 namespace fixit.TheGame.entities.windows
 {
-    public class Door
+    public class Door:Window
     {
-        public Door()
+        private Sprite[] images;
+        private new int state;
+
+        public Door(float x, float y):base(x, y)
         {
+            images = Images.Instance.getDoor();
+            strokesRequired = util.Random.value(0, 16);
+            initWindows();
+
+            width = images[0].getWidth() - 20;
+            height = images[0].getHeight() - 41;
         }
+
+
+        private void initWindows()
+        {
+            if (strokesRequired > 12)
+            {
+                state = 4;
+            }
+            else
+                if (strokesRequired <= 12 && strokesRequired > 8)
+            {
+                state = 3;
+            }
+            else
+                    if (strokesRequired <= 8 && strokesRequired > 4)
+            {
+                state = 2;
+            }
+            else
+                        if (strokesRequired <= 4 && strokesRequired > 0)
+            {
+                state = 1;
+            }
+            else
+                            if (strokesRequired == 0)
+            {
+                state = 0;
+            }
+        }
+
+
+        override
+    public void draw(SKCanvas g)
+        {
+            g.DrawBitmap(images[state].getImage(), new SKPoint((int)getX(), (int)getY()));
+        }
+
+
+        override
+    public void tick()
+        {
+            initWindows();
+        }
+
+
+        override
+    public SKRect getTopBounds()
+        {
+            return new SKRect(0, 0, 0, 0);
+        }
+
+
+        override
+    public SKRect getLeftBounds()
+        {
+            return new SKRect(0, 0, 0, 0);
+        }
+
+
+        override
+    public SKRect getRightBounds()
+        {
+            return new SKRect(0, 0, 0, 0);
+        }
+
+
+        override
+    public SKRect getBotBounds()
+        {
+            return new SKRect((int)getX(), (int)getY() + 95, 60, 4);
+        }
+
+
+
+        override
+    public SKRect getBounds()
+        {
+            return new SKRect((int)getX() + 10, (int)getY() + 40, width, height);
+        }
+
+
+
     }
 }

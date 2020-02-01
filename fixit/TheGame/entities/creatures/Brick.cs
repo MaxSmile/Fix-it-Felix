@@ -27,12 +27,10 @@ namespace fixit.TheGame.entities.creatures
     
 
         override
-    public void draw(SKCanvas c)
+    public void draw(SKCanvas g)
         {
             brick.tick();
-            c.DrawBitmap(brick.getActualFrame(), SKPoint((int)getX(), (int)getY()));
-
-            //		g.draw(getBounds());
+            g.DrawBitmap(brick.getActualFrame(), new SkiaSharp.SKPoint((int)getX(), (int)getY()));
         }
 
         override
@@ -43,7 +41,7 @@ namespace fixit.TheGame.entities.creatures
 
             setY(getY() + vel);
 
-            if (getY() > b.getSector(actualSector).getBotBounds().y + 100)
+            if (getY() > b.getSector(actualSector).getBotBounds().Top + 100)
             {
                 Handler.remove(this);
             }

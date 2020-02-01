@@ -1,24 +1,20 @@
 ﻿using System;
-using fixit.TheGame.statemachine.characterstates.nicelander;
+using fixit.TheGame.statemachine.characterstates.cake;
 using SkiaSharp;
 
 namespace fixit.TheGame.entities
 {
-    public class Nicelander:Entity
+    public class Cake : Entity
     {
-        private long actionsDelay;
-        private bool leaveCake;
-        private Cake cake;
+        private long cakeTime;
 
-        public Nicelander(float x, float y):base(x,y)
+        public Cake(float x, float y):base(x, y)
         {
-            
-            leaveCake = true;
-            state = NicelanderAnimation.getNicelander();
-            actionsDelay = DateTime.Now.Ticks;
+            id = ID.Cake;
             Handler.add(this);
+            cakeTime = DateTime.Now.Ticks;
+            state = CakeAnimation.getCake();
         }
-
 
         override
     public void draw(SKCanvas g)
@@ -27,29 +23,21 @@ namespace fixit.TheGame.entities
             g.DrawBitmap(state.getImage(0), new SKPoint((int)getX(), (int)getY()));
         }
 
-
         override
     public void tick()
         {
-            // TODO: wrong timing!
-            if (0 - actionsDelay > 1150)
+            // TODO: return to this logic. Its wrong!
+            if (0 - cakeTime > 5000)
             {
-                if (leaveCake)
-                {
-                    cake = new Cake((int)getX(), (int)getY());
-                    leaveCake = false;
-                    Handler.remove(this);
-                }
+                Handler.remove(this);
             }
         }
-
 
         override
     public SKRect getBounds()
         {
-            return new SKRect(0, 0, 0, 0);
+            return new SKRect((int)getX(), (int)getY(), 20, 20);
         }
-
 
         override
     public SKRect getTopBounds()
@@ -57,13 +45,11 @@ namespace fixit.TheGame.entities
             return new SKRect(0, 0, 0, 0);
         }
 
-
         override
     public SKRect getLeftBounds()
         {
             return new SKRect(0, 0, 0, 0);
         }
-
 
         override
     public SKRect getRightBounds()
@@ -71,12 +57,12 @@ namespace fixit.TheGame.entities
             return new SKRect(0, 0, 0, 0);
         }
 
-
         override
     public SKRect getBotBounds()
         {
             return new SKRect(0, 0, 0, 0);
         }
 
+        
     }
 }

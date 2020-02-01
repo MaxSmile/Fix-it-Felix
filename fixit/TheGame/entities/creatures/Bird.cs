@@ -1,5 +1,6 @@
 ﻿using System;
 using fixit.TheGame.statemachine;
+using fixit.TheGame.statemachine.characterstates.bird;
 using SkiaSharp;
 
 namespace fixit.TheGame.entities.creatures
@@ -49,7 +50,7 @@ namespace fixit.TheGame.entities.creatures
         {
             state.update();
 
-            g.DrawBitmap(state.getImage(directionX), SKPoint((int)getX(), (int)getY()));
+            g.DrawBitmap(state.getImage(directionX), new SKPoint((int)getX(), (int)getY()));
 
         }
 
@@ -72,7 +73,7 @@ namespace fixit.TheGame.entities.creatures
                 if (getX() < 0 - 20)
                 {
                     side = !side;
-                    setY(util.Random.value(Building.getBuilding().getBotBounds().y, Building.getBuilding().getTopBounds().y));
+                    setY(util.Random.value((int)Building.getBuilding().getBotBounds().Top,(int) Building.getBuilding().getTopBounds().Top));
                 }
                 directionX = -1;
             }
@@ -80,7 +81,7 @@ namespace fixit.TheGame.entities.creatures
         }
 
 
-        public void setVelocity(float vel) { }
+        
 
         override
     public SKRect getBounds()

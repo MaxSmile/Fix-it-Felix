@@ -51,12 +51,12 @@ namespace fixit.TheGame.sectorstates.sectorstates
 
         private void countBrokenWindows()
         {
-            for (int i = 0; i < windows.length; i++)
+            for (int i = 0; i < windows.Length; i++)
             {
                 Window w = windows[i];
                 if (w.isBroken())
                 {
-                    brokenWindows.add(w);
+                    brokenWindows.Add(w);
                 }
             }
         }

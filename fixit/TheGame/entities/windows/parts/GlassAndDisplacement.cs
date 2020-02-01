@@ -46,7 +46,6 @@ namespace fixit.TheGame.entities.windows.parts
                 case 6:
                     dispX = 9;
                     dispY = 11;
-                default:
                     break;
             }
         }
