@@ -13,7 +13,7 @@ namespace fixit
 
 
             btnPlay.Clicked += (sender, args) => { _ = Navigation.PopModalAsync(true); };
-            btnScores.Clicked += (sender, args) => { _ = Navigation.PopModalAsync(true); };
+            btnScores.Clicked += (sender, args) => { _ = Navigation.PushAsync(new ScorePage(0)); };
             btnRules.Clicked += (sender, args) => { _ = Navigation.PopModalAsync(true); };
             btnAbout.Clicked += (sender, args) => { _ = Navigation.PopModalAsync(true); };
         }

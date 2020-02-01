@@ -4,13 +4,19 @@
              x:Class="fixit.ScorePage"
              BackgroundColor="#661D08">
     <ContentPage.Content>
-        <StackLayout
-            BackgroundColor="Wheat"
-            HorizontalOptions="CenterAndExpand"
-            VerticalOptions="CenterAndExpand">
-            <Label
-                x:Name="tempLabel"
-                Text="Here have to be the score page"/>
-        </StackLayout>
+            <StackLayout
+                BackgroundColor="Yellow"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <StackLayout
+                    Margin="4"
+                    BackgroundColor="Wheat"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand">
+                    <Label
+                        x:Name="tempLabel"
+                        Text="Here have to be the score page"/>
+                </StackLayout>
+            </StackLayout>
     </ContentPage.Content>
 </ContentPage>
