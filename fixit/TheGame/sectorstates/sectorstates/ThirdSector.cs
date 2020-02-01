@@ -1,6 +1,7 @@
 ﻿using System;
 using fixit.TheGame.entities.windows;
 using SkiaSharp;
+using Xamarin.Forms;
 
 namespace fixit.TheGame.sectorstates.sectorstates
 {
@@ -96,7 +97,7 @@ namespace fixit.TheGame.sectorstates.sectorstates
 
 
         override
-    public void tick()
+        public void tick()
         {
             for (int i = 0; i < windows.Length; i++)
             {
@@ -114,7 +115,7 @@ namespace fixit.TheGame.sectorstates.sectorstates
         }
 
         override
-    public void draw(SKCanvas g)
+        public void draw(SKCanvas g)
         {
             for (int i = 0; i < windows.Length; i++)
             {
@@ -124,29 +125,29 @@ namespace fixit.TheGame.sectorstates.sectorstates
 
 
         override
-    public bool hasBirds()
+        public bool hasBirds()
         {
             return true;
         }
 
         override
-    public bool hasNicelanders()
+        public bool hasNicelanders()
         {
             return true;
         }
 
 
         override
-    public SKRect getBotBounds()
+        public Rectangle getBotBounds()
         {
-            return new SKRect(POS_X + 18, POS_Y + 543, 278, 8);
+            return new Rectangle(POS_X + 18, POS_Y + 543, 278, 8);
         }
 
 
         override
-    public SKRect getTopBounds()
+        public Rectangle getTopBounds()
         {
-            return new SKRect(POS_X + 18, POS_Y + 300, 278, 8);
+            return new Rectangle(POS_X + 18, POS_Y + 300, 278, 8);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using fixit.TheGame.graphics;
 using SkiaSharp;
+using Xamarin.Forms;
 
 namespace fixit.TheGame.entities.windows
 {
@@ -64,38 +65,38 @@ namespace fixit.TheGame.entities.windows
 
 
         override
-    public SKRect getTopBounds()
+    public Rectangle getTopBounds()
         {
-            return new SKRect(0, 0, 0, 0);
+            return new Rectangle(0, 0, 0, 0);
         }
 
 
         override
-    public SKRect getLeftBounds()
+    public Rectangle getLeftBounds()
         {
-            return new SKRect(0, 0, 0, 0);
+            return new Rectangle(0, 0, 0, 0);
         }
 
 
         override
-    public SKRect getRightBounds()
+    public Rectangle getRightBounds()
         {
-            return new SKRect(0, 0, 0, 0);
+            return new Rectangle(0, 0, 0, 0);
         }
 
 
         override
-    public SKRect getBotBounds()
+    public Rectangle getBotBounds()
         {
-            return new SKRect((int)getX(), (int)getY() + 95, 60, 4);
+            return new Rectangle((int)getX(), (int)getY() + 95, 60, 4);
         }
 
 
 
         override
-    public SKRect getBounds()
+    public Rectangle getBounds()
         {
-            return new SKRect((int)getX() + 10, (int)getY() + 40, width, height);
+            return new Rectangle((int)getX() + 10, (int)getY() + 40, width, height);
         }
 
 

@@ -4,6 +4,7 @@ using fixit.TheGame.entities.windows;
 using fixit.TheGame.graphics;
 using fixit.TheGame.sectorstates.sectorstates;
 using SkiaSharp;
+using Xamarin.Forms;
 
 namespace fixit.TheGame.entities
 {
@@ -186,44 +187,39 @@ namespace fixit.TheGame.entities
         }
 
 
-        public override SKRect getBounds()
+        public override Rectangle getBounds()
         {
-            return new SKRect(0,0,0,0);
+            return new Rectangle(0,0,0,0);
         }
 
 
         override
-    public SKRect getTopBounds()
+    public Rectangle getTopBounds()
         {
             return sectors[actualSector].getTopBounds();
         }
 
 
         override
-    public SKRect getLeftBounds()
+    public Rectangle getLeftBounds()
         {
-            return new SKRect(POS_X + 11, POS_Y, 3, 1000);
+            return new Rectangle(POS_X + 11, POS_Y, 3, 1000);
         }
 
 
         override
-    public SKRect getRightBounds()
+    public Rectangle getRightBounds()
         {
-            return new SKRect(POS_X + 298, POS_Y, 3, 1000);
+            return new Rectangle(POS_X + 298, POS_Y, 3, 1000);
         }
 
 
         override
-    public SKRect getBotBounds()
+    public Rectangle getBotBounds()
         {
             return sectors[actualSector].getBotBounds();
         }
 
-
-        public String getName()
-        {
-            return "Building";
-        }
 
 
         public bool isChangingSector()

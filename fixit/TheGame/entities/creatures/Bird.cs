@@ -2,6 +2,7 @@
 using fixit.TheGame.statemachine;
 using fixit.TheGame.statemachine.characterstates.bird;
 using SkiaSharp;
+using Xamarin.Forms;
 
 namespace fixit.TheGame.entities.creatures
 {
@@ -84,37 +85,37 @@ namespace fixit.TheGame.entities.creatures
         
 
         override
-    public SKRect getBounds()
+    public Rectangle getBounds()
         {
-            return new SKRect((int)getX(), (int)getY(), 30, 20);
+            return new Rectangle((int)getX(), (int)getY(), 30, 20);
         }
 
 
         override
-    public SKRect getTopBounds()
+    public Rectangle getTopBounds()
         {
-            return new SKRect(0, 0, 0, 0);
+            return new Rectangle(0, 0, 0, 0);
         }
 
 
         override
-    public SKRect getLeftBounds()
+    public Rectangle getLeftBounds()
         {
-            return new SKRect(0, 0, 0, 0);
+            return new Rectangle(0, 0, 0, 0);
         }
 
 
         override
-    public SKRect getRightBounds()
+    public Rectangle getRightBounds()
         {
-            return new SKRect(0, 0, 0, 0);
+            return new Rectangle(0, 0, 0, 0);
         }
 
 
         override
-    public SKRect getBotBounds()
+    public Rectangle getBotBounds()
         {
-            return new SKRect(0, 0, 0, 0);
+            return new Rectangle(0, 0, 0, 0);
         }
 
 

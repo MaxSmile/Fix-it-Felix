@@ -5,8 +5,8 @@ namespace fixit.TheGame.entities.windows
     {
         protected int strokesRequired;
 
-        protected bool hasFlowerPot;
-        protected bool hasRoof;
+        public bool hasFlowerPot;
+        public bool hasRoof;
 
         protected Nicelander nicelander;
 

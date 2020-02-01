@@ -1,6 +1,7 @@
 ﻿using System;
 using fixit.TheGame.graphics;
 using SkiaSharp;
+using Xamarin.Forms;
 
 namespace fixit.TheGame.entities.windows
 {
@@ -41,41 +42,41 @@ namespace fixit.TheGame.entities.windows
         }
 
         override
-    public SKRect getTopBounds()
+    public Rectangle getTopBounds()
         {
-            return new SKRect((int)getX(), (int)getY() - 10, 36, 6);
+            return new Rectangle((int)getX(), (int)getY() - 10, 36, 6);
         }
 
         override
-    public SKRect getLeftBounds()
+    public Rectangle getLeftBounds()
         {
             if (doors == 0 || doors == 3)
             {
-                return new SKRect(0, 0, 0, 0);
+                return new Rectangle(0, 0, 0, 0);
             }
-            return new SKRect((int)getX(), (int)getY() + 6, 4, 44);
+            return new Rectangle((int)getX(), (int)getY() + 6, 4, 44);
         }
 
         override
-    public SKRect getRightBounds()
+    public Rectangle getRightBounds()
         {
             if (doors == 0 || doors == 2)
             {
-                return new SKRect(0, 0, 0, 0);
+                return new Rectangle(0, 0, 0, 0);
             }
-            return new SKRect((int)getX() + 32, (int)getY() + 6, 4, 44);
+            return new Rectangle((int)getX() + 32, (int)getY() + 6, 4, 44);
         }
 
         override
-    public SKRect getBotBounds()
+    public Rectangle getBotBounds()
         {
-            return new SKRect((int)getX(), (int)getY() + 49, 40, 5);
+            return new Rectangle((int)getX(), (int)getY() + 49, 40, 5);
         }
 
         override
-    public SKRect getBounds()
+    public Rectangle getBounds()
         {
-            return new SKRect((int)getX(), (int)getY(), width, height);
+            return new Rectangle((int)getX(), (int)getY(), width, height);
         }
 
     }

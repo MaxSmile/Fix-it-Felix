@@ -1,6 +1,7 @@
 ﻿using System;
 using fixit.TheGame.entities.windows;
 using SkiaSharp;
+using Xamarin.Forms;
 
 namespace fixit.TheGame.sectorstates.sectorstates
 {
@@ -106,15 +107,15 @@ namespace fixit.TheGame.sectorstates.sectorstates
 
 
         override
-    public SKRect getBotBounds()
+    public Rectangle getBotBounds()
         {
-            return new SKRect(POS_X + 18, Constant.HEIGHT - 44, 278, 6);
+            return new Rectangle(POS_X + 18, Constant.HEIGHT - 44, 278, 6);
         }
 
         override
-    public SKRect getTopBounds()
+    public Rectangle getTopBounds()
         {
-            return new SKRect(POS_X + 18, POS_Y + 778, 278, 6);
+            return new Rectangle(POS_X + 18, POS_Y + 778, 278, 6);
         }
     }
 }

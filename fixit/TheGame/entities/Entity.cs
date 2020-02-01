@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using fixit.TheGame.physics;
 using fixit.TheGame.statemachine;
 using SkiaSharp;
+using Xamarin.Forms;
 
 namespace fixit.TheGame.entities
 {
@@ -26,11 +27,11 @@ namespace fixit.TheGame.entities
         public abstract void tick();//List<Entity> objects
 
         // Limites
-        public abstract SKRect getBounds();
-        public abstract SKRect getTopBounds();
-        public abstract SKRect getLeftBounds();
-        public abstract SKRect getRightBounds();
-        public abstract SKRect getBotBounds();
+        public abstract Rectangle getBounds();
+        public abstract Rectangle getTopBounds();
+        public abstract Rectangle getLeftBounds();
+        public abstract Rectangle getRightBounds();
+        public abstract Rectangle getBotBounds();
 
         // Getters and setters
         public int getWidth()

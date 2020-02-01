@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using fixit.TheGame.entities;
 using fixit.TheGame.entities.windows;
 using SkiaSharp;
+using Xamarin.Forms;
 
 namespace fixit.TheGame.sectorstates.sectorstates
 {
@@ -29,11 +30,11 @@ namespace fixit.TheGame.sectorstates.sectorstates
         public abstract void tick();
         public abstract void draw(SkiaSharp.SKCanvas g);
 
-        public abstract  bool hasBirds();
-        public abstract  bool hasNicelanders();
+        public abstract bool hasBirds();
+        public abstract bool hasNicelanders();
 
-        public abstract  SKRect getTopBounds();
-        public abstract  SKRect getBotBounds();
+        public abstract Rectangle getTopBounds();
+        public abstract Rectangle getBotBounds();
 
         public Window[] getWindows()
         {

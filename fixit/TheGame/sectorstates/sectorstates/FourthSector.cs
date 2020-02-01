@@ -1,6 +1,7 @@
 ﻿using System;
 using fixit.TheGame.entities.windows;
 using SkiaSharp;
+using Xamarin.Forms;
 
 namespace fixit.TheGame.sectorstates.sectorstates
 {
@@ -129,23 +130,23 @@ namespace fixit.TheGame.sectorstates.sectorstates
         }
 
         override
-    public bool hasNicelanders()
+        public bool hasNicelanders()
         {
             return true;
         }
 
 
         override
-    public SKRect getBotBounds()
+        public Rectangle getBotBounds()
         {
-            return new SKRect(POS_X + 18, POS_Y + 307, 278, 8);
+            return new Rectangle(POS_X + 18, POS_Y + 307, 278, 8);
         }
 
 
         override
-    public SKRect getTopBounds()
+        public Rectangle getTopBounds()
         {
-            return new SKRect(POS_X + 18, POS_Y + 40, 278, 8);
+            return new Rectangle(POS_X + 18, POS_Y + 40, 278, 8);
         }
     }
 }

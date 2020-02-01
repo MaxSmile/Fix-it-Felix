@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using fixit.TheGame.graphics;
 using SkiaSharp;
+using Xamarin.Forms;
 
 namespace fixit.TheGame.entities.creatures
 {
@@ -39,31 +40,29 @@ namespace fixit.TheGame.entities.creatures
             g.DrawBitmap(sprite.getImage(), new SKPoint((int)getX(), (int)getY()));
         }
 
-        public override SKRect getBounds()
+        public override Rectangle getBounds()
         {
-            throw new NotImplementedException();
+            return Rectangle.Zero;
         }
 
-        public override SKRect getTopBounds()
+        public override Rectangle getTopBounds()
         {
-            throw new NotImplementedException();
+            return Rectangle.Zero;
         }
 
-        public override SKRect getLeftBounds()
+        public override Rectangle getLeftBounds()
         {
-            throw new NotImplementedException();
+            return Rectangle.Zero;
         }
 
-        public override SKRect getRightBounds()
+        public override Rectangle getRightBounds()
         {
-            throw new NotImplementedException();
+            return Rectangle.Zero;
         }
 
-        public override SKRect getBotBounds()
+        public override Rectangle getBotBounds()
         {
-            throw new NotImplementedException();
+            return Rectangle.Zero;
         }
-
-        
     }
 }

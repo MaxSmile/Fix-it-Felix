@@ -1,12 +1,13 @@
 ﻿using System;
 using fixit.TheGame.graphics;
 using SkiaSharp;
+using Xamarin.Forms;
 
 namespace fixit.TheGame.entities.creatures
 {
     public class Brick: Creature
     {
-        private Animation brick;
+        private fixit.TheGame.graphics.Animation brick;
 
         private int actualSector;
 
@@ -27,14 +28,14 @@ namespace fixit.TheGame.entities.creatures
     
 
         override
-    public void draw(SKCanvas g)
+        public void draw(SKCanvas g)
         {
             brick.tick();
             g.DrawBitmap(brick.getActualFrame(), new SkiaSharp.SKPoint((int)getX(), (int)getY()));
         }
 
         override
-    public void tick()
+        public void tick()
         {
 
             Building b = Building.getBuilding();
@@ -49,33 +50,33 @@ namespace fixit.TheGame.entities.creatures
 
 
         override
-    public SKRect getBounds()
+        public Rectangle getBounds()
         {
-            return new SKRect((int)getX(), (int)getY(), 18, 12);
+            return new Rectangle((int)getX(), (int)getY(), 18, 12);
         }
 
         override
-    public SKRect getTopBounds()
+        public Rectangle getTopBounds()
         {
-            return new SKRect(0, 0, 0, 0);
+            return new Rectangle(0, 0, 0, 0);
         }
 
         override
-    public SKRect getLeftBounds()
+        public Rectangle getLeftBounds()
         {
-            return new SKRect(0, 0, 0, 0);
+            return new Rectangle(0, 0, 0, 0);
         }
 
         override
-    public SKRect getRightBounds()
+        public Rectangle getRightBounds()
         {
-            return new SKRect(0, 0, 0, 0);
+            return new Rectangle(0, 0, 0, 0);
         }
 
         override
-    public SKRect getBotBounds()
+        public Rectangle getBotBounds()
         {
-            return new SKRect(0, 0, 0, 0);
+            return new Rectangle(0, 0, 0, 0);
         }
     }
 }
