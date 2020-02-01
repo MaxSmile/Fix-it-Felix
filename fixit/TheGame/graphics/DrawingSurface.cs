@@ -17,6 +17,7 @@ namespace fixit.TheGame.graphics
 
         internal void draw(GameStatus gameStatus, SKCanvas canvas)
         {
+            gameStatus.draw(canvas);
             HUD.getHud().draw(canvas);
         }
     }

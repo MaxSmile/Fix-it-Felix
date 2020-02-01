@@ -22,8 +22,8 @@ namespace fixit.TheGame.entities
             position = new Position(x, y);
         }
 
-        public abstract void draw(SKCanvas g, long time);
-        public abstract void tick(List<Entity> objects, long beforeTime);
+        public abstract void draw(SKCanvas g);
+        public abstract void tick();//List<Entity> objects
 
         // Limites
         public abstract SKRect getBounds();
