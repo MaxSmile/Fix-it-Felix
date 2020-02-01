@@ -19,6 +19,9 @@
     <Folder Include="TheGame\util\" />
     <Folder Include="TheGame\entities\" />
     <Folder Include="TheGame\input\" />
+    <Folder Include="TheGame\entities\creatures\" />
+    <Folder Include="TheGame\physics\" />
+    <Folder Include="TheGame\statemachine\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="TheGame\images\sprites_sin_fondo.png" />

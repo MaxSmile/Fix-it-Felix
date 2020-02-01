@@ -16,5 +16,10 @@ namespace fixit.TheGame.sectorstates
         {
             throw new NotImplementedException();
         }
+
+        internal static void changeState(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
