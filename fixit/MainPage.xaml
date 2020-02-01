@@ -13,14 +13,24 @@
         Orientation="Vertical">
         <StackLayout
             Orientation="Horizontal">
-            <Label Text="SCORE: "/>
-            <Label x:Name="lblScore" Text="0"/>
-            <Label Text="TIME: "/>
-            <Label x:Name="lblTime" Text="3:00"/>
-            <Label Text="LIFES: "/>
-            <Image x:Name="imgLife1" Source="{local:ImageResource fixit.TheGame.images.life.png}"/>
-            <Image x:Name="imgLife2" Source="{local:ImageResource fixit.TheGame.images.life.png}"/>
-            <Image x:Name="imgLife3" Source="{local:ImageResource fixit.TheGame.images.life.png}"/>
+                <Label Text="SCORE: "/>
+                <Label x:Name="lblScore" Text="0"/>
+                <Label Text="TIME: "/>
+                <Label x:Name="lblTime" Text="3:00"/>
+                <Label Text="LIFES: "/>
+                <Image x:Name="imgLife1"
+                       Source="{local:ImageResource fixit.TheGame.images.life.png}"
+                       WidthRequest="50"
+                       HeightRequest="50"
+                       ></Image>
+                <Image x:Name="imgLife2"
+                       WidthRequest="50"
+                       HeightRequest="50"
+                       Source="{local:ImageResource fixit.TheGame.images.life.png}"/>
+                <Image x:Name="imgLife3"
+                       WidthRequest="50"
+                       HeightRequest="50"
+                       Source="{local:ImageResource fixit.TheGame.images.life.png}"/>
         </StackLayout>
 
         <StackLayout

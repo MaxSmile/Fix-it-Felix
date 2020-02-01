@@ -35,7 +35,9 @@ namespace fixit
             // Button clicks events
             btnCancel.Clicked += (sender, args) => { KeyBoard.pause = true; };
             btnOK.Clicked += (sender, args) => { KeyBoard.fix = true; };
-            btnOK.Clicked += (sender, args) => { KeyBoard.hitBox = true; };
+            btnOK.Clicked += (sender, args) => {
+                KeyBoard.hitBox = true;
+            };
 
 
             // TODO: navigating buttons have to implement touch down and touch up
