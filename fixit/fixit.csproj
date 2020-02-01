@@ -122,6 +122,7 @@
     <None Remove="FormsImages\ralph_icon.png" />
     <None Remove="FormsImages\score_menu_icon.png" />
     <None Remove="FormsImages\score_txt.png" />
+    <None Remove="FormsImages\rules_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TheGame\images\sprites_sin_fondo.png" />
@@ -209,5 +210,6 @@
     <EmbeddedResource Include="FormsImages\ralph_icon.png" />
     <EmbeddedResource Include="FormsImages\score_menu_icon.png" />
     <EmbeddedResource Include="FormsImages\score_txt.png" />
+    <EmbeddedResource Include="FormsImages\rules_icon.png" />
   </ItemGroup>
 </Project>
