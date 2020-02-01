@@ -23,6 +23,12 @@
     <Folder Include="TheGame\physics\" />
     <Folder Include="TheGame\statemachine\" />
     <Folder Include="TheGame\statemachine\gamestate\" />
+    <Folder Include="TheGame\sectorstates\sectorstates\" />
+    <Folder Include="TheGame\statemachine\characterstates\" />
+    <Folder Include="TheGame\statemachine\characterstates\bird\" />
+    <Folder Include="TheGame\statemachine\characterstates\cake\" />
+    <Folder Include="TheGame\entities\windows\" />
+    <Folder Include="TheGame\entities\windows\parts\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="TheGame\images\sprites_sin_fondo.png" />
