@@ -37,17 +37,11 @@ namespace fixit.TheGame
             }
         }
 
-        SKBitmap resourceBitmap;
+        
         public void startGame(Action ready)
         {
-            string resourceID = "fixit.TheGame.images.sprites_sin_fondo.png";
-            Assembly assembly = GetType().GetTypeInfo().Assembly;
 
-            using (Stream stream = assembly.GetManifestResourceStream(resourceID))
-            {
-                resourceBitmap = SKBitmap.Decode(stream);
-            }
-            
+            Images.Instance.ToString();
             return;
             Score.getScore().readFromFile();
             gameStartTime = DateTime.Now.Ticks;
@@ -70,7 +64,7 @@ namespace fixit.TheGame
     
         internal void OnDraw(SKCanvas canvas)
         {
-            canvas.DrawBitmap(resourceBitmap, new SKPoint(20, 40));
+            canvas.DrawBitmap(Images.Instance.getRoof().getImage(), new SKPoint(20,40));
 
         }
 
