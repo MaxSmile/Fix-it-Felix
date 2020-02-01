@@ -10,12 +10,14 @@ namespace fixit
         public ScorePage()
         {
             InitializeComponent();
-            string jsonScores = (string)Application.Current.Properties["scores"];
-            if(!String.IsNullOrEmpty(jsonScores))
+            if(Application.Current.Properties.ContainsKey("scores"))
             {
-                _scoreList = (System.Collections.Generic.Dictionary<string, string>)JsonConvert.DeserializeObject(jsonScores);
+                string jsonScores = (string)Application.Current.Properties["scores"];
+                if (!String.IsNullOrEmpty(jsonScores))
+                {
+                    _scoreList = (System.Collections.Generic.Dictionary<string, string>)JsonConvert.DeserializeObject(jsonScores);
+                }
             }
-            
         }
 
         private Dictionary<string,string> _scoreList = new Dictionary<string, string>();
