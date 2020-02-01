@@ -22,18 +22,23 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>    
 
 
 
             <StackLayout Grid.Row="0" Grid.Column="0"
                 Orientation="Vertical">
-                <Button BackgroundColor="White"
-                    Text="Cancel"
+                <ImageButton BackgroundColor="White"
+                    Source="fixit/TheGame/images/Buttons/Cancel.png"
+                    HeightRequest="40"
+                    WidthRequest="100"
                     x:Name="btnCancel"/>
-                <Button  BackgroundColor="White"
-                    Text="OK"
+                <ImageButton  BackgroundColor="White"
+                    HeightRequest="40"
+                    WidthRequest="100"
+                    Source="fixit/TheGame/images/Buttons/ok.png"
                     x:Name="btnOK"/>
                 <Button  BackgroundColor="White"
                     Text="Hit"
@@ -42,17 +47,35 @@
 
             <StackLayout Grid.Row="0" Grid.Column="1"
                 Orientation="Vertical">
-                <Button BackgroundColor="White"
-                    Text="Top"
+                <ImageButton BackgroundColor="White"
+                    Source="fixit/TheGame/images/Buttons/top.png"
+                    HeightRequest="40"
+                    WidthRequest="100"
+                     HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    Aspect="Fill"
                     x:Name="btnTop"/>
-                <Button BackgroundColor="White"
-                    Text="Bottom"
+                <ImageButton BackgroundColor="White"
+                    Source="fixit/TheGame/images/Buttons/bottom.png"
+                    HeightRequest="40"
+                    WidthRequest="100"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
                     x:Name="btnBottom"/>
-                <Button  BackgroundColor="White"
-                    Text="Right"
+                <ImageButton  BackgroundColor="White"
+                    HeightRequest="40"
+                    WidthRequest="100"
+                    Source="fixit/TheGame/images/Buttons/right.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
                     x:Name="btnRight"/>
-                <Button  BackgroundColor="White"
-                    Text="Left"
+                <ImageButton  BackgroundColor="White"
+                    HeightRequest="40"
+                    WidthRequest="100"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                   Source="fixit/TheGame/images/Buttons/left.png"
                     x:Name="btnLeft"/>
             </StackLayout>
 
