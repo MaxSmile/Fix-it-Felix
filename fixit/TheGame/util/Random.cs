@@ -3,10 +3,9 @@ namespace fixit.TheGame.util
 {
     public class Random
     {
-        
+        static System.Random generator = new System.Random();
         public static int value(int n, int m)
         {
-            System.Random generator = new System.Random();
             return (int)generator.Next(n,m);
         }
 
