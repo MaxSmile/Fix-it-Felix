@@ -114,6 +114,11 @@
     <None Remove="FormsImages\Buttons\right.png" />
     <None Remove="FormsImages\Buttons\top.png" />
     <None Remove="FormsImages\menutopImage.png" />
+    <None Remove="FormsImages\about_btn.png" />
+    <None Remove="FormsImages\felix_icon.png" />
+    <None Remove="FormsImages\play_btn.png" />
+    <None Remove="FormsImages\rules_btn.png" />
+    <None Remove="FormsImages\score_btn.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TheGame\images\sprites_sin_fondo.png" />
@@ -193,5 +198,10 @@
     <EmbeddedResource Include="FormsImages\Buttons\right.png" />
     <EmbeddedResource Include="FormsImages\Buttons\top.png" />
     <EmbeddedResource Include="FormsImages\menutopImage.png" />
+    <EmbeddedResource Include="FormsImages\about_btn.png" />
+    <EmbeddedResource Include="FormsImages\felix_icon.png" />
+    <EmbeddedResource Include="FormsImages\play_btn.png" />
+    <EmbeddedResource Include="FormsImages\rules_btn.png" />
+    <EmbeddedResource Include="FormsImages\score_btn.png" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fixit.MenuPage"
+             xmlns:local="clr-namespace:fixit;assembly=fixit"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout
+           
+            BackgroundColor="Black"
+            Orientation="Vertical"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand">
+            <Image x:Name="yoImage"
+                   Source="{local:ImageResource fixit.FormsImages.menutopImage.png}"/>
+            <ImageButton BackgroundColor="#00000000" Source="{local:ImageResource fixit.FormsImages.play_btn.png}" x:Name="btnPlay"/>
+            <ImageButton BackgroundColor="#00000000" Source="{local:ImageResource fixit.FormsImages.score_btn.png}" x:Name="btnScores"/>
+            <ImageButton BackgroundColor="#00000000" Source="{local:ImageResource fixit.FormsImages.rules_btn.png}" x:Name="btnRules"/>
+            <ImageButton BackgroundColor="#00000000" Source="{local:ImageResource fixit.FormsImages.about_btn.png}" x:Name="btnAbout"/>
+             <Image x:Name="felix_img"
+                   Source="{local:ImageResource fixit.FormsImages.felix_icon.png}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
