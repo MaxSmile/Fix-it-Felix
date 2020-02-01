@@ -1,5 +1,6 @@
 ﻿using System;
 using fixit.TheGame.sectorstates;
+using SkiaSharp;
 
 namespace fixit.TheGame.graphics
 {
@@ -11,12 +12,12 @@ namespace fixit.TheGame.graphics
 
         internal void tick()
         {
-            throw new NotImplementedException();
+            
         }
 
-        internal void draw(GameStatus gameStatus, long time)
+        internal void draw(GameStatus gameStatus, SKCanvas canvas)
         {
-            throw new NotImplementedException();
+            HUD.getHud().draw(canvas);
         }
     }
 }

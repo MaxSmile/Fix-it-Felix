@@ -39,16 +39,16 @@ namespace fixit
 
             // DRAWING TEXT
 
-            // create the paint for the text
-            var textPaint = new SKPaint
-            {
-                IsAntialias = true,
-                Style = SKPaintStyle.Fill,
-                Color = SKColors.Orange,
-                TextSize = 80
-            };
-            // draw the text (from the baseline)
-            canvas.DrawText("Repair it!", 60, 160 + 80, textPaint);
+            //// create the paint for the text
+            //var textPaint = new SKPaint
+            //{
+            //    IsAntialias = true,
+            //    Style = SKPaintStyle.Fill,
+            //    Color = SKColors.Orange,
+            //    TextSize = 80
+            //};
+            //// draw the text (from the baseline)
+            //canvas.DrawText("Repair it!", 60, 160 + 80, textPaint);
 
 
     

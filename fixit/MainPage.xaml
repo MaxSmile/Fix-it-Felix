@@ -17,10 +17,28 @@
                 PaintSurface="OnCanvasDraw"></views:SKCanvasView>
         </StackLayout>
         <StackLayout
-            BackgroundColor="DarkGray"
             Orientation="Vertical">
-            <!-- Place new controls here -->
-            <Label Text="We need to place the buttons down here" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+            <Button
+                Text="Top"
+                x:Name="btnTop"/>
+            <Button
+                Text="Bottom"
+                x:Name="btnBottom"/>
+            <Button 
+                Text="Right"
+                x:Name="btnRight"/>
+            <Button 
+                Text="Left"
+                x:Name="btnLeft"/>
+            <Button 
+                Text="Cancel"
+                x:Name="btnCancel"/>
+            <Button 
+                Text="OK"
+                x:Name="btnOK"/>
+            <Button 
+                Text="Hit"
+                x:Name="btnHit"/>
         </StackLayout>
         
     </StackLayout>

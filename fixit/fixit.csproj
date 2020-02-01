@@ -22,6 +22,7 @@
     <Folder Include="TheGame\entities\creatures\" />
     <Folder Include="TheGame\physics\" />
     <Folder Include="TheGame\statemachine\" />
+    <Folder Include="TheGame\statemachine\gamestate\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="TheGame\images\sprites_sin_fondo.png" />

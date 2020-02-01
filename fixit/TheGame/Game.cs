@@ -40,9 +40,6 @@ namespace fixit.TheGame
         
         public void startGame(Action ready)
         {
-
-            Images.Instance.ToString();
-            return;
             Score.getScore().readFromFile();
             gameStartTime = DateTime.Now.Ticks;
             Task.Run(async()=> {
@@ -51,8 +48,7 @@ namespace fixit.TheGame
                     await Task.Yield();
                     Device.BeginInvokeOnMainThread(() =>
                     {
-                        tick(DateTime.Now.Ticks);
-                        draw(DateTime.Now.Ticks);
+                        tick();
                         ready?.Invoke();
                     });
                     await Task.Delay(25);
@@ -64,16 +60,16 @@ namespace fixit.TheGame
     
         internal void OnDraw(SKCanvas canvas)
         {
-            canvas.DrawBitmap(Images.Instance.getRoof().getImage(), new SKPoint(20,40));
-
+            draw(canvas);
+            //canvas.DrawBitmap(Images.Instance.getRoof().getImage(), new SKPoint(20,40));
         }
 
-        private void tick(long time)
+        private void tick()
         {
             gameStatus.getActualState();
             if (!Score.getScore().askName())
             {
-                gameStatus.tick(time);
+                gameStatus.tick();
                 drawingSurface.tick();
             }
         }
@@ -84,9 +80,9 @@ namespace fixit.TheGame
         // (it is necessary to indicate in the code that when I press escape the game status will change to pause mode), if I put game manager as status
         // draw the corresponding objects when you are playing felix, birds, ralph, etc.
 
-        private void draw(long time)
+        private void draw(SKCanvas canvas)
         {
-            drawingSurface.draw(gameStatus, time);
+            drawingSurface.draw(gameStatus,canvas);
         }
 
 

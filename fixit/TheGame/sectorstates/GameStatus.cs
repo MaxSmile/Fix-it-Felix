@@ -1,25 +1,62 @@
 ﻿using System;
+using fixit.TheGame.statemachine.gamestate;
+using SkiaSharp;
+
 namespace fixit.TheGame.sectorstates
 {
-    public class GameStatus
+    public class GameStatus : GameState
     {
+        public static GameState[] states;
+        public static GameState actualState;
+
+
         public GameStatus()
         {
+            initState();
+            initActualState();
         }
 
-        internal void tick(long time)
+
+        private void initState()
         {
-            throw new NotImplementedException();
+            states = new GameState[Constant.STATES];
+            states[0] = new PrincipalMenu();
+            states[1] = GameManager.Instance;
+            states[2] = new PauseMenu();
+            states[3] = new ScoreMenu();
+            states[4] = new GameRules();
+            states[5] = new Win();
         }
 
-        internal void getActualState()
+
+        private void initActualState()
         {
-            throw new NotImplementedException();
+            actualState = states[0];
         }
 
-        internal static void changeState(int v)
+
+        public static void changeState(int i)
         {
-            throw new NotImplementedException();
+            actualState = states[i];
         }
+
+
+        public void tick()
+        {
+            actualState.tick();
+        }
+
+
+        public void draw(SKCanvas canvas)
+        {
+            actualState.draw(canvas);
+        }
+
+
+        public GameState getActualState()
+        {
+            return actualState;
+        }
+
     }
 }
