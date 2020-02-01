@@ -5,15 +5,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:views="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              mc:Ignorable="d" x:Class="fixit.MainPage">
+
     <StackLayout
         BackgroundColor="Brown"
         Orientation="Vertical">
+
         <StackLayout
             Margin="0"
             Orientation="Vertical">
             <views:SKCanvasView x:Name="SurfaceView"
-                HeightRequest="500"
-                MinimumHeightRequest="500"
+                HeightRequest="450"
+                MinimumHeightRequest="450"
                 PaintSurface="OnCanvasDraw"></views:SKCanvasView>
         </StackLayout>
 
