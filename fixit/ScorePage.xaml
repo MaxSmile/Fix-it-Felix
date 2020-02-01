@@ -7,7 +7,9 @@
             BackgroundColor="Wheat"
             HorizontalOptions="CenterAndExpand"
             VerticalOptions="CenterAndExpand">
-            <Label Text="Here have to be the score page"/>
+            <Label
+                x:Name="tempLabel"
+                Text="Here have to be the score page"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -23,7 +23,7 @@ namespace fixit
             // When the Game needs to display the Score Page
             TheGame.Game.Instance.OnNeedToSartScorePage = (int score) =>
             {
-                Navigation.PushAsync(new ScorePage());
+                Navigation.PushAsync(new ScorePage(score));
             };
 
             // Start the Game and provide call back which does Surface Invalidate

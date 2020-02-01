@@ -78,7 +78,7 @@ namespace fixit.TheGame
         public void saveScore()
         {
             asking = true;
-            Game.Instance.OnNeedToSartScorePage?.Invoke(0);
+            Game.Instance.OnNeedToSartScorePage?.Invoke(100);
          
         }
 
