@@ -34,7 +34,7 @@ namespace fixit
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            Application.Current.MainPage.SetValue(NavigationPage.BarBackgroundColorProperty, Color.FromHex("#EB5757"));
+            Application.Current.MainPage.SetValue(NavigationPage.BarBackgroundColorProperty, Color.FromHex("#661D08"));
             Application.Current.MainPage.SetValue(NavigationPage.BarTextColorProperty, Color.White);
 
             Task.Run(async()=> {
