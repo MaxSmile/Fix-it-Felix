@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
+using fixit.TheGame.input;
 
 namespace fixit
 {
@@ -21,7 +22,14 @@ namespace fixit
             TheGame.Game.Instance.startGame(()=>{
                 SurfaceView.InvalidateSurface();
             });
-        }
+            btnBottom.Clicked += (sender, args) => { KeyBoard.down = true; };
+            btnTop.Clicked += (sender, args) => { KeyBoard.up = true; };
+            btnRight.Clicked += (sender, args) => { KeyBoard.right = true; };
+            btnLeft.Clicked += (sender, args) => { KeyBoard.left = true; };
+            btnCancel.Clicked += (sender, args) => { KeyBoard.pause = true; };
+            btnOK.Clicked += (sender, args) => { KeyBoard.fix = true; };
+            btnOK.Clicked += (sender, args) => { KeyBoard.hitBox = true; };
+    }
 
         
         private void OnCanvasDraw(object sender, SKPaintSurfaceEventArgs e)
@@ -37,20 +45,7 @@ namespace fixit
 
             TheGame.Game.Instance.OnDraw(canvas);
 
-            // DRAWING TEXT
-
-            //// create the paint for the text
-            //var textPaint = new SKPaint
-            //{
-            //    IsAntialias = true,
-            //    Style = SKPaintStyle.Fill,
-            //    Color = SKColors.Orange,
-            //    TextSize = 80
-            //};
-            //// draw the text (from the baseline)
-            //canvas.DrawText("Repair it!", 60, 160 + 80, textPaint);
-
-
+           
     
         }
 

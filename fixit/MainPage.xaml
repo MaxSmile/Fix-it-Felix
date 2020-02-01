@@ -16,30 +16,48 @@
                 MinimumHeightRequest="400"
                 PaintSurface="OnCanvasDraw"></views:SKCanvasView>
         </StackLayout>
-        <StackLayout
-            Orientation="Vertical">
-            <Button
-                Text="Top"
-                x:Name="btnTop"/>
-            <Button
-                Text="Bottom"
-                x:Name="btnBottom"/>
-            <Button 
-                Text="Right"
-                x:Name="btnRight"/>
-            <Button 
-                Text="Left"
-                x:Name="btnLeft"/>
-            <Button 
-                Text="Cancel"
-                x:Name="btnCancel"/>
-            <Button 
-                Text="OK"
-                x:Name="btnOK"/>
-            <Button 
-                Text="Hit"
-                x:Name="btnHit"/>
-        </StackLayout>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>    
+
+
+
+            <StackLayout Grid.Row="0" Grid.Column="0"
+                Orientation="Vertical">
+                <Button BackgroundColor="White"
+                    Text="Cancel"
+                    x:Name="btnCancel"/>
+                <Button  BackgroundColor="White"
+                    Text="OK"
+                    x:Name="btnOK"/>
+                <Button  BackgroundColor="White"
+                    Text="Hit"
+                    x:Name="btnHit"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="0" Grid.Column="1"
+                Orientation="Vertical">
+                <Button BackgroundColor="White"
+                    Text="Top"
+                    x:Name="btnTop"/>
+                <Button BackgroundColor="White"
+                    Text="Bottom"
+                    x:Name="btnBottom"/>
+                <Button  BackgroundColor="White"
+                    Text="Right"
+                    x:Name="btnRight"/>
+                <Button  BackgroundColor="White"
+                    Text="Left"
+                    x:Name="btnLeft"/>
+            </StackLayout>
+
+        </Grid>
+
         
     </StackLayout>
 </ContentPage>

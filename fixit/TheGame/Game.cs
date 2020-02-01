@@ -61,7 +61,6 @@ namespace fixit.TheGame
         internal void OnDraw(SKCanvas canvas)
         {
             draw(canvas);
-            //canvas.DrawBitmap(Images.Instance.getRoof().getImage(), new SKPoint(20,40));
         }
 
         private void tick()

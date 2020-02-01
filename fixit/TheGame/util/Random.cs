@@ -7,7 +7,7 @@ namespace fixit.TheGame.util
         public static int value(int n, int m)
         {
             System.Random generator = new System.Random();
-            return (int)(generator.Next() * (m - n + 1) + n);
+            return (int)generator.Next(n,m);
         }
 
 
