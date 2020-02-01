@@ -12,8 +12,8 @@
             Margin="0"
             Orientation="Vertical">
             <views:SKCanvasView x:Name="SurfaceView"
-                HeightRequest="600"
-                MinimumHeightRequest="400"
+                HeightRequest="500"
+                MinimumHeightRequest="500"
                 PaintSurface="OnCanvasDraw"></views:SKCanvasView>
         </StackLayout>
 

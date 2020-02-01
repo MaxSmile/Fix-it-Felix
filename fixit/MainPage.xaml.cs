@@ -58,6 +58,8 @@ namespace fixit
             // clear the canvas / view
             canvas.Clear(SKColors.Black);
 
+            // Lets assume that more or less most of the modern devices have 600x1000 points (in pixels its more)
+
             TheGame.Game.Instance.OnDraw(canvas);
 
            
@@ -69,6 +71,15 @@ namespace fixit
             base.OnAppearing();
             Application.Current.MainPage.SetValue(NavigationPage.BarBackgroundColorProperty, Color.FromHex("#661D08"));
             Application.Current.MainPage.SetValue(NavigationPage.BarTextColorProperty, Color.White);
+            Task.Run(async () =>
+            {
+                await Task.Yield();
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    //DisplayAlert(Application.Current.ToString(), "SurfaceView(" + SurfaceView.Width + "," + SurfaceView.Height + ")","OK");
+                    Navigation.PushModalAsync(new MenuPage());
+                });
+            });
         }
 
 
