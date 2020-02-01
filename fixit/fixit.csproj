@@ -30,8 +30,12 @@
     <Folder Include="TheGame\entities\windows\" />
     <Folder Include="TheGame\entities\windows\parts\" />
     <Folder Include="TheGame\statemachine\characterstates\nicelander\" />
+<<<<<<< HEAD
     <Folder Include="TheGame\statemachine\characterstates\felixstates\" />
     <Folder Include="TheGame\statemachine\characterstates\ralphstates\" />
+=======
+    <Folder Include="TheGame\images\Buttons\" />
+>>>>>>> a332f9943318d3957950d4a14c62f8d770fc4b22
   </ItemGroup>
   <ItemGroup>
     <None Remove="TheGame\images\sprites_sin_fondo.png" />
@@ -104,6 +108,12 @@
     <None Remove="TheGame\images\entities\bird\birdLeft\1.png" />
     <None Remove="TheGame\images\entities\bird\birdLeft\0.png" />
     <None Remove="TheGame\images\building\0.png" />
+    <None Remove="TheGame\images\Buttons\bottom.png" />
+    <None Remove="TheGame\images\Buttons\Cancel.png" />
+    <None Remove="TheGame\images\Buttons\left.png" />
+    <None Remove="TheGame\images\Buttons\ok.png" />
+    <None Remove="TheGame\images\Buttons\right.png" />
+    <None Remove="TheGame\images\Buttons\top.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TheGame\images\sprites_sin_fondo.png" />
@@ -176,5 +186,11 @@
     <EmbeddedResource Include="TheGame\images\entities\bird\birdLeft\1.png" />
     <EmbeddedResource Include="TheGame\images\entities\bird\birdLeft\0.png" />
     <EmbeddedResource Include="TheGame\images\building\0.png" />
+    <EmbeddedResource Include="TheGame\images\Buttons\bottom.png" />
+    <EmbeddedResource Include="TheGame\images\Buttons\Cancel.png" />
+    <EmbeddedResource Include="TheGame\images\Buttons\left.png" />
+    <EmbeddedResource Include="TheGame\images\Buttons\ok.png" />
+    <EmbeddedResource Include="TheGame\images\Buttons\right.png" />
+    <EmbeddedResource Include="TheGame\images\Buttons\top.png" />
   </ItemGroup>
 </Project>

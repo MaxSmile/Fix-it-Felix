@@ -17,47 +17,79 @@
                 PaintSurface="OnCanvasDraw"></views:SKCanvasView>
         </StackLayout>
 
-        <Grid>
+        <Grid Margin="10">
             <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>    
 
 
 
             <StackLayout Grid.Row="0" Grid.Column="0"
                 Orientation="Vertical">
-                <Button BackgroundColor="White"
-                    Text="Cancel"
+                <ImageButton Grid.Row="0" Grid.Column="0"
+                    BackgroundColor="White"
+                    Source="fixit/TheGame/images/Buttons/Cancel.png"
+                    HeightRequest="40"
+                    WidthRequest="100"
                     x:Name="btnCancel"/>
-                <Button  BackgroundColor="White"
-                    Text="OK"
+                <ImageButton
+                    Grid.Row="1" Grid.Column="0"
+                    BackgroundColor="White"
+                    HeightRequest="40"
+                    WidthRequest="100"
+                    Source="fixit/TheGame/images/Buttons/ok.png"
                     x:Name="btnOK"/>
-                <Button  BackgroundColor="White"
+                <Button Grid.Row="2" Grid.Column="0"
+                    BackgroundColor="White"
                     Text="Hit"
                     x:Name="btnHit"/>
             </StackLayout>
 
-            <StackLayout Grid.Row="0" Grid.Column="1"
-                Orientation="Vertical">
-                <Button BackgroundColor="White"
-                    Text="Top"
+            
+                <ImageButton
+                    Grid.Row="0" Grid.Column="1"
+                    BackgroundColor="White"
+                    HeightRequest="40"
+                    WidthRequest="100"
+                    Source="fixit/TheGame/images/Buttons/top.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
                     x:Name="btnTop"/>
-                <Button BackgroundColor="White"
-                    Text="Bottom"
+                <ImageButton
+                    Grid.Row="1" Grid.Column="1"
+                    BackgroundColor="White"
+                    Source="fixit/TheGame/images/Buttons/bottom.png"
+                    HeightRequest="40"
+                    WidthRequest="100"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
                     x:Name="btnBottom"/>
-                <Button  BackgroundColor="White"
-                    Text="Right"
+                <ImageButton
+                    Grid.Row="2" Grid.Column="1"
+                    BackgroundColor="White"
+                    HeightRequest="40"
+                    WidthRequest="100"
+                    Source="fixit/TheGame/images/Buttons/right.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
                     x:Name="btnRight"/>
-                <Button  BackgroundColor="White"
-                    Text="Left"
+                <ImageButton
+                    Grid.Row="3" Grid.Column="1"
+                    BackgroundColor="White"
+                    HeightRequest="40"
+                    WidthRequest="100"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                   Source="fixit/TheGame/images/Buttons/left.png"
                     x:Name="btnLeft"/>
-            </StackLayout>
-
         </Grid>
 
-        
     </StackLayout>
 </ContentPage>
