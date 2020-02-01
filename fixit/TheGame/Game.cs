@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -37,8 +38,11 @@ namespace fixit.TheGame
             }
         }
 
+        public Action<int> OnNeedToSartScorePage = null;
+
         
-        public void startGame(Action ready)
+
+        public void startGame(Action readyToInvalidateSurface)
         {
             Score.getScore().readFromFile();
             gameStartTime = DateTime.Now.Ticks;
@@ -49,7 +53,7 @@ namespace fixit.TheGame
                     Device.BeginInvokeOnMainThread(() =>
                     {
                         tick();
-                        ready?.Invoke();
+                        readyToInvalidateSurface?.Invoke();
                     });
                     await Task.Delay(25);
                 }

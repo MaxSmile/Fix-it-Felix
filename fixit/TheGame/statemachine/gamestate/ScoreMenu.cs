@@ -12,12 +12,12 @@ namespace fixit.TheGame.statemachine.gamestate
 
         public void draw(SKCanvas c)
         {
-            throw new NotImplementedException();
+            // TODO: deprecated class
         }
 
         public void tick()
         {
-            throw new NotImplementedException();
+            // TODO: deprecated class
         }
     }
 }

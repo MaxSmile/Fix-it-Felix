@@ -19,19 +19,34 @@ namespace fixit
         public MainPage()
         {
             InitializeComponent();
+
+            // When the Game needs to display the Score Page
+            TheGame.Game.Instance.OnNeedToSartScorePage = (int score) =>
+            {
+                Navigation.PushAsync(new ScorePage());
+            };
+
+            // Start the Game and provide call back which does Surface Invalidate
             TheGame.Game.Instance.startGame(()=>{
                 SurfaceView.InvalidateSurface();
             });
+
+
+            // Button clicks events
+            btnCancel.Clicked += (sender, args) => { KeyBoard.pause = true; };
+            btnOK.Clicked += (sender, args) => { KeyBoard.fix = true; };
+            btnOK.Clicked += (sender, args) => { KeyBoard.hitBox = true; };
+
+
+            // TODO: navigating buttons have to implement touch down and touch up
             btnBottom.Clicked += (sender, args) => { KeyBoard.down = true; };
             btnTop.Clicked += (sender, args) => { KeyBoard.up = true; };
             btnRight.Clicked += (sender, args) => { KeyBoard.right = true; };
             btnLeft.Clicked += (sender, args) => { KeyBoard.left = true; };
-            btnCancel.Clicked += (sender, args) => { KeyBoard.pause = true; };
-            btnOK.Clicked += (sender, args) => { KeyBoard.fix = true; };
-            btnOK.Clicked += (sender, args) => { KeyBoard.hitBox = true; };
-    }
 
-        
+        }
+
+
         private void OnCanvasDraw(object sender, SKPaintSurfaceEventArgs e)
         {
             // CLEARING THE SURFACE
@@ -49,7 +64,9 @@ namespace fixit
     
         }
 
+
+
+
+
     }
-
-
 }

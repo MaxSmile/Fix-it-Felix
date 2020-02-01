@@ -78,12 +78,8 @@ namespace fixit.TheGame
         public void saveScore()
         {
             asking = true;
-            // TODO: enter user name for the new score
-
-
-            throw new Exception("Not implemented");
-
-
+            Game.Instance.OnNeedToSartScorePage?.Invoke(0);
+         
         }
 
         public int getActualScore()
