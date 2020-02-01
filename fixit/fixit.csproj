@@ -30,12 +30,9 @@
     <Folder Include="TheGame\entities\windows\" />
     <Folder Include="TheGame\entities\windows\parts\" />
     <Folder Include="TheGame\statemachine\characterstates\nicelander\" />
-<<<<<<< HEAD
     <Folder Include="TheGame\statemachine\characterstates\felixstates\" />
     <Folder Include="TheGame\statemachine\characterstates\ralphstates\" />
-=======
     <Folder Include="TheGame\images\Buttons\" />
->>>>>>> a332f9943318d3957950d4a14c62f8d770fc4b22
   </ItemGroup>
   <ItemGroup>
     <None Remove="TheGame\images\sprites_sin_fondo.png" />
