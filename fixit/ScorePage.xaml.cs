@@ -30,7 +30,11 @@ namespace fixit
             }
             
         }
-
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            TheGame.Game.Instance.resetGame();
+        }
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -52,7 +56,7 @@ namespace fixit
                     }
                     if (UsersScores.Count > 0)
                     {
-                        string result = "Scores: \r\n";
+                        string result = "\r\n";
                         foreach (KeyValuePair<string, string> entry in UsersScores)
                         {
                             result += entry.Key + ": " + entry.Value+"\r\n";

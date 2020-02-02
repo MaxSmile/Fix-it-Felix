@@ -31,8 +31,9 @@
                                 Margin="0,30,0,0"/>
                         <Label
                             x:Name="tempLabel"
-                            HorizontalOptions="CenterAndExpand"
-                            Margin="0,20,0,0"
+                            VerticalOptions="StartAndExpand"
+                            HorizontalOptions="StartAndExpand"
+                            Margin="20,0,0,0"
                             Text=""/>
                     </StackLayout>
                 </StackLayout>

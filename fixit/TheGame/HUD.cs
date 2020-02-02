@@ -1,6 +1,8 @@
 ﻿using System;
 using fixit.TheGame.entities.creatures;
 using fixit.TheGame.graphics;
+using fixit.TheGame.sectorstates;
+using fixit.TheGame.statemachine.gamestate;
 using SkiaSharp;
 
 namespace fixit.TheGame
@@ -10,7 +12,6 @@ namespace fixit.TheGame
         private Sprite lifeImage;
         private int lifeAmount;
         private util.Timer clock;
-        private Felix felix;
 
         private static HUD hud = new HUD();
 
@@ -20,11 +21,6 @@ namespace fixit.TheGame
             lifeImage = Images.Instance.getLife();
         }
 
-
-        public void setFelix(Felix felix)
-        {
-            this.felix = felix;
-        }
 
 
         public static HUD getHud()
@@ -42,23 +38,21 @@ namespace fixit.TheGame
                 TextSize = 20
             };
 
-            canvas.DrawRect(new SKRect(0,26,30,50),paint);
-            canvas.DrawRect(new SKRect(100, 26, 130, 50), paint);
-
+            //canvas.DrawRect(new SKRect(0,26,30,50),paint);
+            //canvas.DrawRect(new SKRect(100, 26, 130, 50), paint);
+            
 
             paint.Color = SKColors.Red;
-            canvas.DrawText("SCORE", 60, 80, paint);
+            canvas.DrawText(GameStatus.actualState.GetType().Name, 60, 80, paint);
 
-            
-            paint.Color = SKColors.White;
-            canvas.DrawText("" + Score.getScore().getActualScore(), 120, 80, paint);
+
+            //paint.Color = SKColors.White;
+            //canvas.DrawText("" + Score.getScore().getActualScore(), 120, 80, paint);
 
             clock.draw(canvas);
 
             drawLife(canvas);
         }
-
-
 
 
         private void drawLife(SKCanvas canvas)
@@ -80,7 +74,7 @@ namespace fixit.TheGame
 
         public void tick()
         {
-            lifeAmount = felix.getLife();
+            lifeAmount = GameManager.Instance.GetFelix().getLife();
             clock.tick();
         }
     }

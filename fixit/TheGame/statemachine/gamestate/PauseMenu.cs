@@ -12,12 +12,20 @@ namespace fixit.TheGame.statemachine.gamestate
 
         void GameState.draw(SKCanvas c)
         {
-            throw new NotImplementedException();
+            var textPaint = new SKPaint
+            {
+                IsAntialias = true,
+                Style = SKPaintStyle.Fill,
+                Color = SKColors.Orange,
+                TextSize = 80
+            };
+
+            c.DrawText("PAUSED", Constant.WIDTH / 2 - 200, Constant.HEIGHT / 2 + 40, textPaint);
         }
 
         void GameState.tick()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

@@ -117,12 +117,17 @@
     <None Remove="FormsImages\about_btn.png" />
     <None Remove="FormsImages\felix_icon.png" />
     <None Remove="FormsImages\play_btn.png" />
-    <None Remove="FormsImages\rules_btn.png" />
     <None Remove="FormsImages\score_btn.png" />
     <None Remove="FormsImages\ralph_icon.png" />
     <None Remove="FormsImages\score_menu_icon.png" />
-    <None Remove="FormsImages\score_txt.png" />
     <None Remove="FormsImages\rules_icon.png" />
+    <None Remove="FormsImages\about_btn.png" />
+    <None Remove="FormsImages\play_btn.png" />
+    <None Remove="FormsImages\ralph_icon.png" />
+    <None Remove="FormsImages\rules_btn.png" />
+    <None Remove="FormsImages\rules_icon.png" />
+    <None Remove="FormsImages\score_btn.png" />
+    <None Remove="FormsImages\score_txt.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TheGame\images\sprites_sin_fondo.png" />
@@ -202,14 +207,19 @@
     <EmbeddedResource Include="FormsImages\Buttons\right.png" />
     <EmbeddedResource Include="FormsImages\Buttons\top.png" />
     <EmbeddedResource Include="FormsImages\menutopImage.png" />
-    <EmbeddedResource Include="FormsImages\about_btn.png" />
     <EmbeddedResource Include="FormsImages\felix_icon.png" />
-    <EmbeddedResource Include="FormsImages\play_btn.png" />
-    <EmbeddedResource Include="FormsImages\rules_btn.png" />
-    <EmbeddedResource Include="FormsImages\score_btn.png" />
-    <EmbeddedResource Include="FormsImages\ralph_icon.png" />
     <EmbeddedResource Include="FormsImages\score_menu_icon.png" />
-    <EmbeddedResource Include="FormsImages\score_txt.png" />
+    <EmbeddedResource Include="FormsImages\about_btn.png" />
+    <EmbeddedResource Include="FormsImages\play_btn.png" />
+    <EmbeddedResource Include="FormsImages\ralph_icon.png" />
+    <EmbeddedResource Include="FormsImages\rules_btn.png" />
     <EmbeddedResource Include="FormsImages\rules_icon.png" />
+    <EmbeddedResource Include="FormsImages\score_btn.png" />
+    <EmbeddedResource Include="FormsImages\score_txt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

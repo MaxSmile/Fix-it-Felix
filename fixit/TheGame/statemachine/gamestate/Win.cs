@@ -68,16 +68,18 @@ namespace fixit.TheGame.statemachine.gamestate
         public void tick()
         {
 
-            long beforeTime = 0;
+            
             for (int i = 0; i < clouds.Length; i++)
             {
                 clouds[i].tick();
             }
 
-            if (beforeTime - timing > 5000)
-            {
-                GameStatus.changeState(1);
-            }
+            // TODO: looks like it starts the game again
+            //long beforeTime = 0;
+            //if (beforeTime - timing > 5000)
+            //{
+            //    GameStatus.changeState(GameStatus.GAME_STATES.GAME);
+            //}
 
         }
 

@@ -23,7 +23,7 @@ namespace fixit.TheGame.util
             countDown();
             if (second == 0 && minute == 0)
             {
-                GameStatus.changeState(3);
+                GameStatus.changeState(GameStatus.GAME_STATES.SCORE);
                 Score.getScore().saveScore();
                 reset();
             }

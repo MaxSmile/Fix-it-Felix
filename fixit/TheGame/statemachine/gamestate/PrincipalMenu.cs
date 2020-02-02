@@ -51,10 +51,11 @@ namespace fixit.TheGame.statemachine.gamestate
             {
                 cloud[i].tick();
             }
+
             if(KeyBoard.ifAny())
             {
                 KeyBoard.consume();
-                GameStatus.changeState(1);
+                GameStatus.changeState(GameStatus.GAME_STATES.GAME);
             }
         }
     }
