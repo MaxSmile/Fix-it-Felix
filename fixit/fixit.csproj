@@ -217,4 +217,9 @@
     <EmbeddedResource Include="FormsImages\score_btn.png" />
     <EmbeddedResource Include="FormsImages\score_txt.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

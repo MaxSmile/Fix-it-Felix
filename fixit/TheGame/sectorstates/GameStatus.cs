@@ -9,6 +9,7 @@ namespace fixit.TheGame.sectorstates
         public static GameState[] states;
         public static GameState actualState;
 
+        public enum GAME_STATES { MENU,GAME,PAUSE,SCORE,RULES,WIN };
 
         public GameStatus()
         {
@@ -31,13 +32,14 @@ namespace fixit.TheGame.sectorstates
 
         private void initActualState()
         {
-            actualState = states[0];
+            actualState = states[(int)GAME_STATES.MENU];
         }
 
+        
 
-        public static void changeState(int i)
+        public static void changeState(GAME_STATES i)
         {
-            actualState = states[i];
+            actualState = states[(int)i];
         }
 
 
@@ -49,6 +51,7 @@ namespace fixit.TheGame.sectorstates
 
         public void draw(SKCanvas canvas)
         {
+            
             actualState.draw(canvas);
         }
 

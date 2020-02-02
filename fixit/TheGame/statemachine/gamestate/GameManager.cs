@@ -40,7 +40,10 @@ namespace fixit.TheGame.statemachine.gamestate
         }
 
 
-        
+        public Felix GetFelix()
+        {
+            return felix;
+        }
 
         private GameManager()
         {
@@ -53,7 +56,7 @@ namespace fixit.TheGame.statemachine.gamestate
 
             felix = new Felix(Constant.WIDTH / 2, Constant.HEIGHT - 100);
 
-            HUD.getHud().setFelix(felix);
+         
 
             chooseLevel = false;
 
@@ -72,7 +75,7 @@ namespace fixit.TheGame.statemachine.gamestate
             if (b.canChangeLevel())
             {
                 Win.setTiming(time);
-                GameStatus.changeState(5);
+                GameStatus.changeState(GameStatus.GAME_STATES.WIN);
             }
 
 
@@ -86,7 +89,7 @@ namespace fixit.TheGame.statemachine.gamestate
             if (felix.getLife() == 0)
             {
                 Score.getScore().saveScore();
-                GameStatus.changeState(3);
+                GameStatus.changeState(GameStatus.GAME_STATES.SCORE);
                 felix.resetAll(Constant.WIDTH / 2, Constant.HEIGHT - 100);
             }
 
@@ -97,7 +100,7 @@ namespace fixit.TheGame.statemachine.gamestate
 
             if (KeyBoard.pause)
             {
-                GameStatus.changeState(2);
+                GameStatus.changeState(GameStatus.GAME_STATES.PAUSE);
             }
 
         }
@@ -134,10 +137,10 @@ namespace fixit.TheGame.statemachine.gamestate
             {
                 Level.getLevel().resetGame();
             }
-
+            GameStatus.changeState(0);
             ralph.reset(300, 240);
             felix.resetAll(Constant.WIDTH / 2, Constant.HEIGHT - 100);
-            HUD.getHud().setFelix(felix);
+
             DrawingSurface.resetSurface();
             Handler.removeAll();
         }

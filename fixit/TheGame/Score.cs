@@ -8,7 +8,7 @@ namespace fixit.TheGame
         private String[] scoreNames = new String[4];
         private int[] scorePoints = new int[4];
 
-        private bool asking = false;
+  
 
         private int actualScore;
         private int MAX_SCORE_AMOUNT = 4;
@@ -77,9 +77,6 @@ namespace fixit.TheGame
 
         public void saveScore()
         {
-            asking = true;
-            Game.Instance.OnNeedToSartScorePage?.Invoke(100);
-         
         }
 
         public int getActualScore()
@@ -103,12 +100,6 @@ namespace fixit.TheGame
         public String getCertainName(int i)
         {
             return scoreNames[i];
-        }
-
-
-        public bool askName()
-        {
-            return asking;
         }
 
 

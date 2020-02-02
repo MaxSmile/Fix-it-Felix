@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using fixit.TheGame.graphics;
 using fixit.TheGame.sectorstates;
+using fixit.TheGame.statemachine.gamestate;
 using SkiaSharp;
 using Xamarin.Forms;
 
@@ -60,21 +61,25 @@ namespace fixit.TheGame
             });
         }
 
+        public void resetGame()
+        {
+            GameManager.Instance.resetGameManager();
+            drawingSurface = new DrawingSurface();
+            gameStatus = new GameStatus();
+        }
 
     
         internal void OnDraw(SKCanvas canvas)
         {
             draw(canvas);
+
         }
 
         private void tick()
         {
-            gameStatus.getActualState();
-            if (!Score.getScore().askName())
-            {
-                gameStatus.tick();
-                drawingSurface.tick();
-            }
+
+            gameStatus.tick();
+            drawingSurface.tick();
         }
 
 
