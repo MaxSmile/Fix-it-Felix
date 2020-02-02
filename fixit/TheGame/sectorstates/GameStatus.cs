@@ -39,7 +39,13 @@ namespace fixit.TheGame.sectorstates
 
         public static void changeState(GAME_STATES i)
         {
-            actualState = states[(int)i];
+            if(i== GAME_STATES.SCORE)
+            {
+
+            } else
+            {
+                actualState = states[(int)i];
+            }
         }
 
 
