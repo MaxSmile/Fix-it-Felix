@@ -128,6 +128,14 @@
     <None Remove="FormsImages\rules_icon.png" />
     <None Remove="FormsImages\score_btn.png" />
     <None Remove="FormsImages\score_txt.png" />
+    <None Remove="FormsImages\ok_btn.png" />
+    <None Remove="FormsImages\pause_btn.png" />
+    <None Remove="FormsImages\cancel_btn.png" />
+    <None Remove="FormsImages\left_btn.png" />
+    <None Remove="FormsImages\right_btn.png" />
+    <None Remove="FormsImages\top_btn.png" />
+    <None Remove="FormsImages\bottom_btn.png" />
+    <None Remove="FormsImages\centre_btn.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TheGame\images\sprites_sin_fondo.png" />
@@ -216,6 +224,14 @@
     <EmbeddedResource Include="FormsImages\rules_icon.png" />
     <EmbeddedResource Include="FormsImages\score_btn.png" />
     <EmbeddedResource Include="FormsImages\score_txt.png" />
+    <EmbeddedResource Include="FormsImages\ok_btn.png" />
+    <EmbeddedResource Include="FormsImages\pause_btn.png" />
+    <EmbeddedResource Include="FormsImages\cancel_btn.png" />
+    <EmbeddedResource Include="FormsImages\left_btn.png" />
+    <EmbeddedResource Include="FormsImages\right_btn.png" />
+    <EmbeddedResource Include="FormsImages\top_btn.png" />
+    <EmbeddedResource Include="FormsImages\bottom_btn.png" />
+    <EmbeddedResource Include="FormsImages\centre_btn.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="AboutPage.xaml.cs">

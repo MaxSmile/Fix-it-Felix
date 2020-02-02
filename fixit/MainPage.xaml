@@ -39,9 +39,34 @@
             Margin="0"
             Orientation="Vertical">
             <views:SKCanvasView x:Name="SurfaceView"
-                HeightRequest="450"
-                MinimumHeightRequest="450"
+                HeightRequest="350"
+                MinimumHeightRequest="350"
                 PaintSurface="OnCanvasDraw"></views:SKCanvasView>
+        </StackLayout>
+
+        <StackLayout
+              BackgroundColor="#7A7A57"
+              HeightRequest="100">
+                    <StackLayout
+                        BackgroundColor="#B3B390"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="CenterAndExpand"
+                        Margin="10,0,10,0"
+                        HeightRequest="100"
+                        Orientation="Horizontal">
+                        <StackLayout
+                            BackgroundColor="#B3B390"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            Orientation="Horizontal">
+
+                            <ImageButton BackgroundColor="#00000000" Source="{local:ImageResource fixit.FormsImages.ok_btn.png}" x:Name="btnOk" HorizontalOptions="Start"/>
+                            <ImageButton BackgroundColor="#00000000" Source="{local:ImageResource fixit.FormsImages.cancel_btn.png}" x:Name="btnCancel" HorizontalOptions="Center"/>
+                            <ImageButton BackgroundColor="#00000000" Source="{local:ImageResource fixit.FormsImages.pause_btn.png}" x:Name="btnPause" HorizontalOptions="End"/>
+                        </StackLayout>
+         
+                   </StackLayout>
+
         </StackLayout>
 
         <Grid>
@@ -54,63 +79,39 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
      
-
-
             <StackLayout Grid.Row="0" Grid.Column="0">
-                <Label Text="?"/>
+                <Label Text=""/>
             </StackLayout>
             <StackLayout Grid.Row="0" Grid.Column="1">
-                <Button BackgroundColor="White"
-                    Text="Top"
-                    x:Name="btnTop"/>
+                 <ImageButton BackgroundColor="#00000000" Source="{local:ImageResource fixit.FormsImages.top_btn.png}" x:Name="btnTop"/>
+               
             </StackLayout>
             <StackLayout Grid.Row="0" Grid.Column="2">
-                <Label Text="?"/>
-            </StackLayout>
-            <StackLayout Grid.Row="0" Grid.Column="3">
-                <Button BackgroundColor="White"
-                    Text="OK"
-                    x:Name="btnOK"/>
+                <Label Text=""/>
             </StackLayout>
             <StackLayout Grid.Row="1" Grid.Column="0">
-                <Button  BackgroundColor="White"
-                    Text="Left"
-                    x:Name="btnLeft"/>
+                <ImageButton BackgroundColor="#00000000" Source="{local:ImageResource fixit.FormsImages.left_btn.png}" x:Name="btnLeft"/>
+
             </StackLayout>
             <StackLayout Grid.Row="1" Grid.Column="1">
-                <Label Text="?"/>
+                <ImageButton BackgroundColor="#00000000" Source="{local:ImageResource fixit.FormsImages.centre_btn.png}" x:Name="btnCentre"/>
             </StackLayout>
             <StackLayout Grid.Row="1" Grid.Column="2">
-                <Button  BackgroundColor="White"
-                    Text="Right"
-                    x:Name="btnRight"/>
+
+                <ImageButton BackgroundColor="#00000000" Source="{local:ImageResource fixit.FormsImages.right_btn.png}" x:Name="btnRight"/>
             </StackLayout>
-            <StackLayout Grid.Row="1" Grid.Column="3">
-                <Button  BackgroundColor="White"
-                    Text="Hit"
-                    x:Name="btnHit"/>
-            </StackLayout>
+          
             <StackLayout Grid.Row="2" Grid.Column="0">
-                <Label Text="?"/>
+                <Label Text=""/>
             </StackLayout>
             <StackLayout Grid.Row="2" Grid.Column="1">
-                <Button BackgroundColor="White"
-                    Text="Bottom"
-                    x:Name="btnBottom"/>
+                <ImageButton BackgroundColor="#00000000" Source="{local:ImageResource fixit.FormsImages.bottom_btn.png}" x:Name="btnBottom"/>
             </StackLayout>
             <StackLayout Grid.Row="2" Grid.Column="2">
-                <Label Text="?"/>
+                <Label Text=""/>
             </StackLayout>
-            <StackLayout Grid.Row="2" Grid.Column="3">
-                <Button BackgroundColor="White"
-                    Text="Cancel"
-                    x:Name="btnCancel"/>
-            </StackLayout>
-
-
         </Grid>
 
         
